@@ -1,0 +1,70 @@
+header{
+    width: 100%;
+    height: 70px;
+    background-color:gainsboro;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav a{
+    text-decoration: none;
+    color:black;
+}
+.btn{
+    width: 120px;
+    height: 50px;
+    border-radius: 6px;
+
+}
+#hero{
+    position: relative;
+    width: 100%;
+    height: 400px;
+   /*background-color: blueviolet;*/
+    background-image:url("/building.jpg");
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    text-align: center;
+     display: flex;
+     flex-direction: column;
+    align-items: center;
+    color:white;
+}
+.main-content {
+    padding: 40px;
+    background-color:white;
+}
+
+.main-content .content-wrapper {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 100px; /* Space between columns */
+}
+
+.main-content .text-column {
+    flex: 2; /* Takes up 2 parts of the available space */
+    color:black;
+    align-content: space-around;
+}
+
+.main-content .image-column {
+    flex: 1; /* Takes up 1 part of the available space */
+}
+
+.main-content .image-column img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below image */
+}
+footer{
+    background-color:gray;
+    color: white;
+    text-align: center;
+}
