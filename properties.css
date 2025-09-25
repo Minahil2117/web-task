@@ -1,0 +1,152 @@
+/* Basic Styles */
+body {
+    margin: 20px;
+    background-color: white;
+    color: black;
+}
+
+.main-heading {
+    text-align: center;
+    color: blueviolet;
+    text-shadow: 1px 1px 2px #ccc;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.box {
+    background-color:white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Position Property */
+.relative-parent {
+    position: relative;
+    height: 200px;
+}
+
+.relative-child {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background-color: lightblue;
+}
+
+.absolute-child {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: lightcoral;
+}
+
+.fixed-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:greenyellow;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px  black (0, 0, 0, 0.2);
+}
+
+/* Border Styles */
+.border-examples div {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: whitesmoke;
+}
+
+.dashed-border {
+    border: 2px dashed lightseagreen;
+}
+
+.dotted-border {
+    border: 2px dotted lightsalmon;
+}
+
+.solid-border {
+    border: 2px solid green;
+}
+
+/* Filter Property */
+.filter-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+.invert-filter {
+    filter: invert(100%);
+}
+
+.saturate-filter {
+    filter: saturate(200%);
+}
+
+.contrast-filter {
+    filter: contrast(150%);
+}
+
+.grayscale-filter {
+    filter: grayscale(100%);
+}
+
+.opacity-filter {
+    filter: opacity(50%);
+}
+
+.blur-filter {
+    filter: blur(5px);
+}
+
+/* Overflow Property */
+.overflow-example {
+    display: flex;
+    gap: 20px;
+}
+
+.overflow-hidden,
+.overflow-scroll {
+    width: 200px;
+    height: 100px;
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 0;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}

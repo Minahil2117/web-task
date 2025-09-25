@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Property Practice</title>
+    <link rel="stylesheet" href="properties.css">
+</head>
+<body>
+
+    <h1 class="main-heading">CSS Property Showcase</h1>
+
+    <div class="container">
+        <div class="box relative-parent">
+            <h2>Position Property</h2>
+            <div class="box relative-child">Relative</div>
+            <div class="box absolute-child">Absolute</div>
+        </div>
+        
+        <div class="box fixed-box">
+            Fixed
+        </div>
+
+        <div class="box border-examples">
+            <h2>Border Styles</h2>
+            <div class="dashed-border">Dashed Border</div>
+            <div class="dotted-border">Dotted Border</div>
+            <div class="solid-border">Solid Border</div>
+        </div>
+
+        <div class="box filter-examples">
+            <h2>Filter Property</h2>
+            <div class="image-container">
+                <img src="/building.jpg" alt="Random Unsplash Image">
+                <p>Original</p>
+            </div>
+            <div class="image-container">
+                <img class="invert-filter" src="/building.jpg" alt="Inverted Image">
+                <p>Invert</p>
+            </div>
+            <div class="image-container">
+                <img class="saturate-filter" src="/building.jpg" alt="Saturated Image">
+                <p>Saturate</p>
+            </div>
+            <div class="image-container">
+                <img class="contrast-filter" src="/building.jpg" alt="Contrast Image">
+                <p>Contrast</p>
+            </div>
+            <div class="image-container">
+                <img class="grayscale-filter" src="/building.jpg" alt="Grayscale Image">
+                <p>Grayscale</p>
+            </div>
+            <div class="image-container">
+                <img class="opacity-filter" src="/building.jpg" alt="Opacity Image">
+                <p>Opacity</p>
+            </div>
+            <div class="image-container">
+                <img class="blur-filter" src="/building.jpg" alt="Blurred Image">
+                <p>Blur</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="box overflow-example">
+        <h2>Overflow Property</h2>
+        <p class="overflow-hidden">
+            This is a div with a fixed width and height. The content is longer than the container, and `overflow: hidden` will hide the excess text. This demonstrates the `overflow-x` and `overflow-y` properties implicitly, as setting a fixed size can lead to content exceeding the boundaries.
+        </p>
+        <p class="overflow-scroll">
+            This is another div with a fixed size. The content here is also longer than the container, but `overflow: scroll` will add scrollbars to let you view all of the content. This is useful when you have a large amount of text that you don't want to overflow the page layout.
+        </p>
+    </div>
+
+</body>
+</html>
