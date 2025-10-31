@@ -3,54 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MINHA BUILDS</title>
-    <link rel="stylesheet" href="simple web pg dsgn.css">
+    <title>Student Performance Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        #student-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .student-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.6s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .student-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .student-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .student-card h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #666;
+            min-width: 80px;
+        }
+
+        .info-value {
+            color: #333;
+            flex: 1;
+        }
+
+        .marks-display {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .pass {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: white;
+        }
+
+        .fail {
+            background: linear-gradient(135deg, #eb3349, #f45c43);
+            color: white;
+        }
+
+        .id-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #f0f0f0;
+            color: #666;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .student-card {
+                padding: 20px;
+            }
+
+            #student-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-<div class="logo">
-    <h3> MINHA BUILDS</h3>
-</div>
-<nav>
-    <a href="Home.html">Home</a>
-    <a href="About.html">About</a>
-    <a href="Services.html">Services</a>
-    <a href="Projects.html">Projects</a>
-    <a href="Pages.html">Pages</a>
-</nav>
-<button class="btn">Get in Touch</button>
-    </header>
-    <main>
-        <section id="hero">
-            <h1>WE DESIGN YOUR SPACE</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Sit adipisci ex molestias 
-                reiciendis ipsum cum doloremque eaque. 
-                Adipisci, blanditiis impedit.
-            </p>
-            <button class="btn1">
-                OUR PROJECTS
-            </button>
-            
-        </section>
-         <section class="main-content">
-        <div class="container">
-            <div class="content-wrapper">
-                <div class="text-column">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eveniet sit dolores qui eos nulla est sint, minima consequuntur doloremque, officiis adipisci a repudiandae vero nesciunt nam modi, eligendi fugiat! Eligendi, corporis, aliquid molestiae placeat enim, eaque delectus perspiciatis animi rerum maiores sequi officia voluptatum? Dolorem.</p>
-                </div>
-                <div class="image-column">
-                    <img src="/building.jpg" alt="Modern Building">
-                    </div>
-            </div>
-        </div>
-    </section>
- </main>
-
-    <footer>
-<p>&copy; 2024 MINHA BUILDS. All rights reserved.</p>
-    </footer>
+    <div class="header">
+        <h1>🎓 Student Performance Dashboard</h1>
+        <p>Academic Year 2024-2025</p>
+    </div>
     
+    <div id="student-container"></div>
+
+    <script src="student.js"></script>
 </body>
 </html>
